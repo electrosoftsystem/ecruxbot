@@ -28,7 +28,7 @@ export default function Navbar() {
         <li><Link to="/aboutus" className={location.pathname === '/aboutus' ? 'active' : ''}>About Us</Link></li>
         <li><Link to="/products" className={location.pathname === '/products' ? 'active' : ''}>Products</Link></li>
         <li><Link to="/courses" className={location.pathname === '/courses' ? 'active' : ''}>UpSkills</Link></li>
-        <li><Link to="/blogs" className={location.pathname === '/blogs' ? 'active' : ''}>Blogs</Link></li>
+  <li><a href="https://ecruxbot.in/blog.php" className={location.pathname === '/blogs' ? 'active' : ''}>Blogs</a></li>
       </ul>
       <div className="navbar-right">
         <Link to="/contact" className="contact-btn">Contact Us</Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
               <Link to="/aboutus" className={location.pathname === '/aboutus' ? 'active' : ''} onClick={() => setDrawerOpen(false)}>About Us</Link>
               <Link to="/products" className={location.pathname === '/products' ? 'active' : ''} onClick={() => setDrawerOpen(false)}>Products</Link>
               <Link to="/courses" className={location.pathname === '/courses' ? 'active' : ''} onClick={() => setDrawerOpen(false)}>UpSkills</Link>
-              <Link to="/blogs" className={location.pathname === '/blogs' ? 'active' : ''} onClick={() => setDrawerOpen(false)}>Blogs</Link>
+              <a href="https://ecruxbot.in/blog.php" className={location.pathname === '/blogs' ? 'active' : ''} onClick={() => setDrawerOpen(false)}>Blogs</a>
               <Link to="/contact" className="drawer-contact-btn" onClick={() => setDrawerOpen(false)}>Contact Us</Link>
             </nav>
           </aside>

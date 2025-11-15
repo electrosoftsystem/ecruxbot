@@ -1,5 +1,4 @@
 import React from 'react';
-import sampleCourseImg from '../assets/sample-course.png';
 import './CourseDetail.css';
 
 export default function CourseDetail({ course, onBack }) {

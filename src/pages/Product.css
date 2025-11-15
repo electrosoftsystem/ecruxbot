@@ -101,9 +101,11 @@
 /* ...existing code... */
 /* ...existing code... */
 .product-card {
-  background: rgba(30, 20, 60, 0.98);
+  /* make card slightly translucent so background dots/glow from Home.module.css are visible */
+  background: rgba(30, 20, 60, 0.72);
+  backdrop-filter: blur(8px) saturate(140%);
   border-radius: 24px;
-  box-shadow: 0 8px 48px 0 #0008, 0 4px 32px rgba(0,0,0,0.45);
+  box-shadow: 0 10px 60px rgba(16,10,40,0.55), 0 4px 32px rgba(0,0,0,0.45);
   padding: 36px 36px 32px 36px;
   max-width: 900px;
   width: 100%;
@@ -112,7 +114,7 @@
   align-items: center;
   gap: 32px;
   margin: 32px auto;
-  border: 1.5px solid rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.06);
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -121,13 +123,14 @@
 
 
 .product-image {
-  background: rgba(30,20,60,0.85);
+  background: rgba(30,20,60,0.6);
+  backdrop-filter: blur(6px);
   border-radius: 16px;
   width: 240px;
   height: 240px;
   object-fit: contain;
   margin-right: 32px;
-  box-shadow: 0 2px 16px #0004;
+  box-shadow: 0 6px 28px rgba(16,10,40,0.45);
 }
 .product-details {
   flex: 1;
@@ -171,7 +174,7 @@
   pointer-events: none;
   position: fixed;
   inset: 0;
-  z-index: -1 !important;
+  z-index: 0 !important; /* keep dots visible behind content but above page background */
   background-image:
     radial-gradient(rgba(255,255,255,0.08) 1.2px, transparent 1.2px),
     radial-gradient(rgba(255,255,255,0.08) 1.2px, transparent 1.2px);
@@ -179,7 +182,7 @@
   background-position: 0 0, 16px 16px;
   width: 100vw !important;
   height: 100vh !important;
-  opacity: 0.7;
+  opacity: 0.72;
 }
 
 .products-section {

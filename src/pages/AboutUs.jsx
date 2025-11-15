@@ -49,7 +49,7 @@ export default function AboutUs() {
               position: 'relative',
             }}>
               {/* Left color bar for accent */}
-              <div style={{position: 'absolute', left: 0, top: 32, bottom: 32, width: 8, borderRadius: 8, background: 'linear-gradient(180deg,#a259ff 0%,#ff4fcf 100%)', zIndex: 1}}></div>
+              <div style={{position: 'absolute', left: 0, top: 32, bottom: 32, width: 8, borderRadius: 8, background: 'linear-gradient(180deg,#a259ff 0%,#b388ff 100%)', zIndex: 1}}></div>
               {/* Vision Text */}
               <div style={{flex: '1 1 380px', minWidth: 260, zIndex: 2, paddingLeft: 24}}>
                 <div style={{display: 'flex', alignItems: 'center', marginBottom: 10}}>
@@ -58,7 +58,7 @@ export default function AboutUs() {
                     fontWeight: 900,
                     fontSize: '2em',
                     letterSpacing: '-1px',
-                    background: 'linear-gradient(90deg,#a259ff 30%,#ff4fcf 100%)',
+                    background: 'linear-gradient(90deg,#a259ff 30%,#b388ff 100%)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -70,10 +70,10 @@ export default function AboutUs() {
                 </div>
                 {/* <div style={{fontWeight: 900, fontSize: '1.25em', color: '#fff', margin: '18px 0 8px 0'}}>Our Vision</div> */}
                 <p style={{color: '#e0e0e0', fontSize: '1.08em', marginBottom: 12, lineHeight: 1.6}}>
-                  Welcome to <b style={{color:'#ff4fcf'}}>Ecruxbot</b>, where your vision meets our robotics precision. Innovation and education converge in the dynamic world of robotics. Founded by visionary engineers, We see a future where robots are not limited to factories they teach, assist, and inspire.
+                  Welcome to <b style={{color:'#b388ff'}}>Ecruxbot</b>, where your vision meets our robotics precision. Innovation and education converge in the dynamic world of robotics. Founded by visionary engineers, We see a future where robots are not limited to factories they teach, assist, and inspire.
 Ecruxbot exists to make that future ready.
                 </p>
-                <div style={{fontWeight: 700, color: '#ff4fcf', marginBottom: 6, fontSize: '1.08em'}}>Our Specialization</div>
+                <div style={{fontWeight: 700, color: '#b388ff', marginBottom: 6, fontSize: '1.08em'}}>Our Specialization</div>
                 <div style={{color: '#fff', fontSize: '1.08em', marginBottom: 8}}>At Ecruxbot, we focus on developing:</div>
                 <ul style={{marginBottom: 14, marginLeft: 18, color: '#fff', fontSize: '1.08em', listStyle: 'disc'}}>
                   <li>Consumer Robots</li>
@@ -96,7 +96,7 @@ Ecruxbot exists to make that future ready.
 
       {/* What Sets Us Apart Section */}
       <section className="aboutus-apart" style={{margin: '3em 0 2em 0', width: '100%'}}>
-        <h2 className="aboutus-apart-title" style={{fontWeight: 900, fontSize: '2.3em', letterSpacing: '-1px', background: 'linear-gradient(90deg,#a259ff 30%,#ff4fcf 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>What Sets Us Apart</h2>
+  <h2 className="aboutus-apart-title" style={{fontWeight: 900, fontSize: '2.3em', letterSpacing: '-1px', background: 'linear-gradient(90deg,#a259ff 30%,#b388ff 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>What Sets Us Apart</h2>
         <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2.5em', margin: '2.5em 0 0 0'}}>
           {/* Innovation Card */}
           <div style={{
@@ -112,7 +112,7 @@ Ecruxbot exists to make that future ready.
             border: '2px solid transparent',
             backdropFilter: 'blur(6px)',
           }}
-            onMouseOver={e => {e.currentTarget.style.boxShadow='0 12px 48px #a259ff77, 0 0 0 4px #ff408155';e.currentTarget.style.transform='translateY(-10px) scale(1.06)';e.currentTarget.style.border='2px solid #a259ff'}}
+            onMouseOver={e => {e.currentTarget.style.boxShadow='0 12px 48px #a259ff77, 0 0 0 4px #b388ff55';e.currentTarget.style.transform='translateY(-10px) scale(1.06)';e.currentTarget.style.border='2px solid #a259ff'}}
             onMouseOut={e => {e.currentTarget.style.boxShadow='0 4px 32px #a259ff33, 0 0 0 2px #a259ff22';e.currentTarget.style.transform='none';e.currentTarget.style.border='2px solid transparent'}}
           >
             <div style={{fontSize: '2.5em', marginBottom: 10, filter: 'drop-shadow(0 2px 8px #a259ff88)'}}>🤖</div>
@@ -138,7 +138,7 @@ Ecruxbot exists to make that future ready.
             border: '2px solid transparent',
             backdropFilter: 'blur(6px)',
           }}
-            onMouseOver={e => {e.currentTarget.style.boxShadow='0 12px 48px #a259ff77, 0 0 0 4px #ff408155';e.currentTarget.style.transform='translateY(-10px) scale(1.06)';e.currentTarget.style.border='2px solid #a259ff'}}
+            onMouseOver={e => {e.currentTarget.style.boxShadow='0 12px 48px #a259ff77, 0 0 0 4px #b388ff55';e.currentTarget.style.transform='translateY(-10px) scale(1.06)';e.currentTarget.style.border='2px solid #a259ff'}}
             onMouseOut={e => {e.currentTarget.style.boxShadow='0 4px 32px #a259ff33, 0 0 0 2px #a259ff22';e.currentTarget.style.transform='none';e.currentTarget.style.border='2px solid transparent'}}
           >
             <div style={{fontSize: '2.5em', marginBottom: 10, filter: 'drop-shadow(0 2px 8px #a259ff88)'}}>🛡️</div>
@@ -164,7 +164,7 @@ Ecruxbot exists to make that future ready.
             border: '2px solid transparent',
             backdropFilter: 'blur(6px)',
           }}
-            onMouseOver={e => {e.currentTarget.style.boxShadow='0 12px 48px #a259ff77, 0 0 0 4px #ff408155';e.currentTarget.style.transform='translateY(-10px) scale(1.06)';e.currentTarget.style.border='2px solid #a259ff'}}
+            onMouseOver={e => {e.currentTarget.style.boxShadow='0 12px 48px #a259ff77, 0 0 0 4px #b388ff55';e.currentTarget.style.transform='translateY(-10px) scale(1.06)';e.currentTarget.style.border='2px solid #a259ff'}}
             onMouseOut={e => {e.currentTarget.style.boxShadow='0 4px 32px #a259ff33, 0 0 0 2px #a259ff22';e.currentTarget.style.transform='none';e.currentTarget.style.border='2px solid transparent'}}
           >
             <div style={{fontSize: '2.5em', marginBottom: 10, filter: 'drop-shadow(0 2px 8px #a259ff88)'}}>📚</div>

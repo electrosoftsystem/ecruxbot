@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Product.css';
+import homeStyles from './Home.module.css';
 
 const products = [
   {
@@ -83,8 +84,9 @@ export default function Product() {
     const product = products[selectedProduct];
     const images = product.images;
     return (
-      <div style={{ position: 'relative', maxWidth: '100vw', minHeight: '100vh', overflowX: 'hidden', background: 'transparent', color: '#fff' }}>
-        <div className="products-dot-bg"></div>
+      <div className={homeStyles['rigbetel-dark-bg']} style={{ position: 'relative', maxWidth: '100vw', minHeight: '100vh', overflowX: 'hidden', background: 'transparent', color: '#fff' }}>
+        <div className={homeStyles.dotBg}></div>
+        <div className={homeStyles.rightGlow}></div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', position: 'relative', zIndex: 2, background: 'none', width: '100%', maxWidth: '100vw', overflowX: 'hidden' }}>
           <div style={{ position: 'relative', width: '100%', maxWidth: '1100px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center', overflowX: 'hidden' }}>
             <div style={{
@@ -182,8 +184,11 @@ export default function Product() {
 
   // Render product list if no product is selected
   return (
-    <div style={{ position: 'relative', maxWidth: '100vw', minHeight: '100vh', overflowX: 'hidden', background: 'transparent' }}>
-      <div className="products-dot-bg"></div>
+    <div className={homeStyles['rigbetel-dark-bg']} style={{ position: 'relative', maxWidth: '100vw', minHeight: '100vh', overflowX: 'hidden', background: 'transparent' }}>
+        <div className={homeStyles.dotBg}></div>
+        <div className={homeStyles.rightGlow}></div>
+        <div className="orb orb-1" />
+        <div className="orb orb-2" />
       <div className="products-section">
         <h2 className="products-title">Our Products</h2>
         <div className="products-list">

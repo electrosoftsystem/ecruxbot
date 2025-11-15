@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CourseDetail from './CourseDetail';
 import './AboutUs.css';
-import sampleCourseImg from '../assets/sample-course.png';
+import homeStyles from './Home.module.css';
 const courses = [
   {
     name: 'Raspberry Pi Pico W : Basic & Intermediate',
@@ -31,22 +31,28 @@ export default function Courses() {
     );
   }
   return (
-    <div className="products-section">
-      <h2 className="products-title">All The Skills You Need</h2>
-      <div className="products-list">
-        {courses.map((course, idx) => (
-          <div className="product-card" key={idx}>
-            <img src={course.image} alt={course.name} className="product-image" />
-            <div className="product-details">
-              <div className="product-title">{course.name}</div>
-              <div className="product-desc">{course.desc}</div>
-              <div className="product-price" style={{ color: '#ffb300' }}>{course.tag} Course</div>
-              <button className="product-btn" onClick={() => setSelectedCourse(idx)}>
-                View Course
-              </button>
+    <div className={homeStyles['rigbetel-dark-bg']}>
+      <div className={homeStyles.dotBg} />
+      <div className={homeStyles.rightGlow} />
+      <div className="orb orb-1" />
+      <div className="orb orb-2" />
+      <div className="products-section">
+        <h2 className="products-title">All The Skills You Need</h2>
+        <div className="products-list">
+          {courses.map((course, idx) => (
+            <div className="product-card" key={idx}>
+              <img src={course.image} alt={course.name} className="product-image" />
+              <div className="product-details">
+                <div className="product-title">{course.name}</div>
+                <div className="product-desc">{course.desc}</div>
+                <div className="product-price" style={{ color: '#ffb300' }}>{course.tag} Course</div>
+                <button className="product-btn" onClick={() => setSelectedCourse(idx)}>
+                  View Course
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@
   /* === SCHEME 1: CYAN + PURPLE (CURRENT - Futuristic) === */
   --primary: #00f6ff;      /* Bright Cyan */
   --secondary: #b56bff;    /* Purple */
-  --accent: #ff6ec7;       /* Pink */
+  --accent: rgb(128, 114, 122);       /* Pink */
   
   /* === SCHEME 2: ELECTRIC BLUE + ORANGE (Energetic) === */
   /* Uncomment these 3 lines to use this scheme */
@@ -213,6 +213,29 @@ body{
     0 0 120px rgba(181,107,255,0.3);
   border-color:var(--primary);
 }
+
+/* Home-specific hover: use a softer light-violet overlay so the card doesn't look too dark on hover */
+.solution-card.home-card:hover::before{
+  /* Soft white-pink pastel gradient for Home hover */
+  background: linear-gradient(135deg,
+    rgba(255, 245, 247, 0.94) 0%, /* almost white with pink tint */
+    rgba(255, 220, 230, 0.72) 50%, /* light pink */
+    rgba(255, 200, 230, 0.48) 100% /* pastel pink */
+  );
+  opacity: 0.9;
+}
+
+.solution-card.home-card:hover{
+  transform:translateY(-8px) scale(1.01);
+  /* very subtle warm-pink translucent background so content stays readable */
+  background: rgba(255,230,235,0.06);
+  box-shadow:
+    0 14px 36px rgba(255,182,193,0.12),
+    0 0 48px rgba(255,200,220,0.08);
+  border-color: rgba(255,200,220,0.45);
+}
+
+/* NOTE: Home cards keep their content visible by default. */
 
 /* ===== ICON WRAPPER ===== */
 .icon-wrapper{

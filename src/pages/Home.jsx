@@ -86,7 +86,8 @@ function Home() {
           <h2
             style={{
               textAlign: 'center',
-              background: 'linear-gradient(90deg, #00f6ff 0%, #b56bff 50%, #ff6ec7 100%)',
+              /* use light violet instead of bright pink for the heading gradient */
+              background: 'linear-gradient(90deg, #00f6ff 0%, #b56bff 50%, #b388ff 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
@@ -104,7 +105,7 @@ function Home() {
           <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 30px', position: 'relative', zIndex: 10 }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 40, marginTop: 60 }}>
               {/* Robot Platform Card */}
-              <div className="solution-card">
+              <div className="solution-card home-card">
                 <div className="icon-wrapper">
                   <div className="robot-icon">
                     <div className="antenna" />
@@ -126,7 +127,7 @@ function Home() {
                 </div>
               </div>
               {/* EduBot Card */}
-              <div className="solution-card">
+              <div className="solution-card home-card">
                 <div className="icon-wrapper">
                   <div className="edubot-icon">
                     <div className="brain" />
