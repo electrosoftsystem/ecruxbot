@@ -1,0 +1,521 @@
+/* ========================================== */
+/* COLOR SCHEME - YAHA PE CHANGE KARO!       */
+/* ========================================== */
+
+:root{
+  /* === SCHEME 1: CYAN + PURPLE (CURRENT - Futuristic) === */
+  --primary: #00f6ff;      /* Bright Cyan */
+  --secondary: #b56bff;    /* Purple */
+  --accent: #ff6ec7;       /* Pink */
+  
+  /* === SCHEME 2: ELECTRIC BLUE + ORANGE (Energetic) === */
+  /* Uncomment these 3 lines to use this scheme */
+  /* --primary: #0066ff;      Electric Blue */
+  /* --secondary: #ff6600;    Vibrant Orange */
+  /* --accent: #ffaa00;       Golden Orange */
+  
+  /* === SCHEME 3: NEON GREEN + PURPLE (Matrix Style) === */
+  /* --primary: #00ff88;      Neon Green */
+  /* --secondary: #9933ff;    Deep Purple */
+  /* --accent: #00ffff;       Cyan */
+  
+  /* === SCHEME 4: GOLD + NAVY (Premium/Professional) === */
+  /* --primary: #ffd700;      Gold */
+  /* --secondary: #001f3f;    Navy Blue */
+  /* --accent: #ff9500;       Orange Gold */
+  
+  /* === SCHEME 5: RED + DARK BLUE (Bold Tech) === */
+  /* --primary: #ff3366;      Red */
+  /* --secondary: #0a1628;    Dark Blue */
+  /* --accent: #ff6699;       Light Pink */
+  
+  /* === SCHEME 6: TEAL + VIOLET (Modern Developer) === */
+  /* --primary: #00d4aa;      Teal */
+  /* --secondary: #7b5fff;    Violet */
+  /* --accent: #ff5fd7;       Magenta */
+  
+  /* === SCHEME 7: ORANGE + DEEP PURPLE (Creative) === */
+  /* --primary: #ff8c42;      Coral Orange */
+  /* --secondary: #6a0dad;    Deep Purple */
+  /* --accent: #ffb347;       Peach */
+  
+  /* === SCHEME 8: LIME + MAGENTA (Cyberpunk) === */
+  /* --primary: #c0ff00;      Lime */
+  /* --secondary: #ff00ff;    Magenta */
+  /* --accent: #00ffff;       Cyan */
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Inter", sans-serif;
+  background:#0f0f1e;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ===== ANIMATED GRID BACKGROUND ===== */
+.bg-grid{
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(0,246,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,246,255,0.04) 1px, transparent 1px);
+  background-size:60px 60px;
+  animation:grid-move 25s linear infinite;
+  z-index:0;
+}
+
+@keyframes grid-move{
+  0%{transform:translateY(0) translateX(0);}
+  100%{transform:translateY(60px) translateX(60px);}
+}
+
+/* ===== GLOW ORBS - NOW USING CSS VARIABLES ===== */
+.orb{
+  position:fixed;
+  border-radius:50%;
+  filter:blur(150px);
+  opacity:0.2;
+  z-index:0;
+  pointer-events:none;
+}
+
+.orb-1{
+  width:700px;
+  height:700px;
+  background:radial-gradient(circle, var(--primary), transparent);
+  top:-250px;
+  right:-250px;
+  animation:float-orb 20s ease-in-out infinite;
+}
+
+.orb-2{
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle, var(--secondary), transparent);
+  bottom:-200px;
+  left:-200px;
+  animation:float-orb 25s ease-in-out infinite reverse;
+}
+
+@keyframes float-orb{
+  0%, 100%{transform:translate(0,0) scale(1);}
+  50%{transform:translate(80px, -80px) scale(1.2);}
+}
+
+/* ===== CONTAINER ===== */
+.container{
+  max-width:1300px;
+  margin:0 auto;
+  padding:80px 30px;
+  position:relative;
+  z-index:10;
+}
+
+/* ===== MAIN HEADING SECTION ===== */
+.main-heading{
+  margin-bottom:80px;
+  animation:fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp{
+  from{opacity:0; transform:translateY(50px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.main-heading h1{
+  font-size:clamp(36px, 6vw, 64px);
+  font-weight:900;
+  margin-bottom:20px;
+  line-height:1.15;
+  background:linear-gradient(135deg, #ffffff 0%, var(--primary) 50%, var(--secondary) 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  background-size:200% 200%;
+  animation:gradient-flow 5s ease infinite;
+  letter-spacing:-2px;
+}
+
+@keyframes gradient-flow{
+  0%, 100%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+}
+
+.main-heading p{
+  font-size:clamp(16px, 2vw, 20px);
+  color:#a8a8c0;
+  font-weight:300;
+  line-height:1.6;
+  max-width:700px;
+}
+
+/* ===== SOLUTIONS GRID ===== */
+.solutions-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+  gap:40px;
+  margin-top:60px;
+}
+
+/* ===== SOLUTION CARD ===== */
+.solution-card{
+  background:rgba(20,20,35,0.6);
+  backdrop-filter:blur(25px) saturate(180%);
+  border-radius:28px;
+  padding:50px 40px;
+  border:1px solid rgba(255,255,255,0.1);
+  position:relative;
+  overflow:hidden;
+  transition:all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor:pointer;
+  min-height:450px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/* Gradient border - NOW USING CSS VARIABLES */
+.solution-card::before{
+  content:"";
+  position:absolute;
+  inset:-3px;
+  background:linear-gradient(135deg, var(--primary), var(--secondary), var(--accent), var(--primary));
+  background-size:400% 400%;
+  border-radius:28px;
+  z-index:-1;
+  opacity:0;
+  transition:opacity 0.5s ease;
+  animation:gradient-rotate 6s linear infinite;
+}
+
+@keyframes gradient-rotate{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.solution-card:hover::before{
+  opacity:1;
+}
+
+.solution-card:hover{
+  transform:translateY(-15px) scale(1.02);
+  background:#000000;
+  box-shadow:
+    0 30px 80px rgba(0,246,255,0.4),
+    0 0 120px rgba(181,107,255,0.3);
+  border-color:var(--primary);
+}
+
+/* ===== ICON WRAPPER ===== */
+.icon-wrapper{
+  width:180px;
+  height:180px;
+  margin-bottom:35px;
+  position:relative;
+  animation:float-icon 3s ease-in-out infinite;
+}
+
+@keyframes float-icon{
+  0%, 100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
+
+/* ===== ROBOT ICON - NOW USING CSS VARIABLES ===== */
+.robot-icon{
+  width:100%;
+  height:100%;
+  position:relative;
+}
+
+.robot-icon .head{
+  width:80px;
+  height:80px;
+  background:linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius:15px;
+  position:absolute;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  box-shadow:
+    0 0 30px var(--primary),
+    inset 0 -10px 20px rgba(0,0,0,0.3);
+  animation:head-tilt 4s ease-in-out infinite;
+}
+
+@keyframes head-tilt{
+  0%, 100%{transform:translateX(-50%) rotate(0deg);}
+  25%{transform:translateX(-50%) rotate(-5deg);}
+  75%{transform:translateX(-50%) rotate(5deg);}
+}
+
+.robot-icon .eye{
+  width:15px;
+  height:15px;
+  background:#ffffff;
+  border-radius:50%;
+  position:absolute;
+  top:30px;
+  box-shadow:0 0 15px rgba(255,255,255,0.8);
+  animation:blink 4s infinite;
+}
+
+.robot-icon .eye.left{left:20px;}
+.robot-icon .eye.right{right:20px;}
+
+@keyframes blink{
+  0%, 48%, 52%, 100%{height:15px;}
+  50%{height:2px;}
+}
+
+.robot-icon .antenna{
+  width:3px;
+  height:20px;
+  background:linear-gradient(180deg, var(--primary), transparent);
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  animation:antenna-glow 2s ease-in-out infinite;
+}
+
+.robot-icon .antenna::after{
+  content:"";
+  width:10px;
+  height:10px;
+  background:var(--primary);
+  border-radius:50%;
+  position:absolute;
+  top:-5px;
+  left:50%;
+  transform:translateX(-50%);
+  box-shadow:0 0 20px var(--primary);
+  animation:pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes antenna-glow{
+  0%, 100%{opacity:0.5;}
+  50%{opacity:1;}
+}
+
+@keyframes pulse{
+  0%, 100%{transform:translateX(-50%) scale(1);}
+  50%{transform:translateX(-50%) scale(1.4);}
+}
+
+.robot-icon .body{
+  width:100px;
+  height:70px;
+  background:linear-gradient(135deg, #1a1a2e, #0f0f1e);
+  border-radius:12px;
+  position:absolute;
+  top:110px;
+  left:50%;
+  transform:translateX(-50%);
+  border:2px solid var(--primary);
+  box-shadow:
+    0 0 25px var(--primary),
+    inset 0 5px 15px var(--primary);
+}
+
+.robot-icon .circuit{
+  width:60px;
+  height:2px;
+  background:var(--primary);
+  position:absolute;
+  top:25px;
+  left:20px;
+  box-shadow:0 0 10px var(--primary);
+  animation:circuit-flow 2s linear infinite;
+}
+
+@keyframes circuit-flow{
+  0%{opacity:0.3; width:20px;}
+  50%{opacity:1; width:60px;}
+  100%{opacity:0.3; width:20px;}
+}
+
+.robot-icon .circuit:nth-child(2){
+  top:40px;
+  animation-delay:0.5s;
+}
+
+.robot-icon .arm{
+  width:15px;
+  height:60px;
+  background:linear-gradient(180deg, var(--primary), var(--secondary));
+  border-radius:8px;
+  position:absolute;
+  top:115px;
+  box-shadow:0 0 15px var(--primary);
+  animation:wave-arm 3s ease-in-out infinite;
+}
+
+.robot-icon .arm.left{
+  left:15px;
+  transform-origin:top center;
+}
+
+.robot-icon .arm.right{
+  right:15px;
+  transform-origin:top center;
+  animation-delay:1.5s;
+}
+
+@keyframes wave-arm{
+  0%, 100%{transform:rotate(0deg);}
+  25%{transform:rotate(-20deg);}
+  75%{transform:rotate(20deg);}
+}
+
+/* ===== EDUBOT ICON - NOW USING CSS VARIABLES ===== */
+.edubot-icon{
+  width:100%;
+  height:100%;
+  position:relative;
+}
+
+.edubot-icon .book{
+  width:100px;
+  height:80px;
+  background:linear-gradient(135deg, var(--secondary), var(--accent));
+  border-radius:8px;
+  position:absolute;
+  top:60px;
+  left:50%;
+  transform:translateX(-50%);
+  box-shadow:
+    0 0 40px var(--secondary),
+    inset 0 -10px 30px rgba(0,0,0,0.4);
+  animation:book-open 4s ease-in-out infinite;
+}
+
+@keyframes book-open{
+  0%, 100%{transform:translateX(-50%) rotateX(0deg);}
+  50%{transform:translateX(-50%) rotateX(15deg);}
+}
+
+.edubot-icon .page{
+  width:80px;
+  height:2px;
+  background:rgba(255,255,255,0.6);
+  position:absolute;
+  left:10px;
+  animation:page-glow 3s ease-in-out infinite;
+}
+
+.edubot-icon .page:nth-child(1){top:20px;}
+.edubot-icon .page:nth-child(2){top:35px; animation-delay:0.5s;}
+.edubot-icon .page:nth-child(3){top:50px; animation-delay:1s;}
+
+@keyframes page-glow{
+  0%, 100%{opacity:0.4; box-shadow:none;}
+  50%{opacity:1; box-shadow:0 0 15px var(--secondary);}
+}
+
+.edubot-icon .brain{
+  width:60px;
+  height:60px;
+  background:radial-gradient(circle, var(--accent), var(--secondary));
+  border-radius:50%;
+  position:absolute;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  box-shadow:
+    0 0 50px var(--accent),
+    inset 0 -10px 20px rgba(0,0,0,0.3);
+  animation:brain-pulse 2s ease-in-out infinite;
+}
+
+@keyframes brain-pulse{
+  0%, 100%{transform:translateX(-50%) scale(1);}
+  50%{transform:translateX(-50%) scale(1.15);}
+}
+
+.edubot-icon .neural{
+  width:2px;
+  height:30px;
+  background:linear-gradient(180deg, var(--accent), transparent);
+  position:absolute;
+  top:25px;
+  animation:neural-flow 1.5s ease-in-out infinite;
+}
+
+.edubot-icon .neural:nth-child(5){
+  left:40%;
+  animation-delay:0s;
+}
+
+.edubot-icon .neural:nth-child(6){
+  left:50%;
+  animation-delay:0.3s;
+}
+
+.edubot-icon .neural:nth-child(7){
+  left:60%;
+  animation-delay:0.6s;
+}
+
+@keyframes neural-flow{
+  0%{opacity:0; transform:translateY(0);}
+  50%{opacity:1;}
+  100%{opacity:0; transform:translateY(20px);}
+}
+
+/* ===== CARD CONTENT ===== */
+.card-content{
+  position:relative;
+  z-index:5;
+}
+
+.solution-card h2{
+  font-size:clamp(26px, 3vw, 32px);
+  font-weight:800;
+  margin-bottom:18px;
+  background:linear-gradient(135deg, #ffffff, var(--primary));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  letter-spacing:-1px;
+  transition:all 0.4s ease;
+}
+
+.solution-card:hover h2{
+  background:linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+  background-size:200% 200%;
+  animation:text-shimmer 2s linear infinite;
+}
+
+@keyframes text-shimmer{
+  0%{background-position:0% 50%;}
+  100%{background-position:200% 50%;}
+}
+
+.solution-card p{
+  font-size:17px;
+  line-height:1.7;
+  color:#d0d0e5;
+  font-weight:300;
+  transition:all 0.4s ease;
+}
+
+.solution-card:hover p{
+  color:#ffffff;
+  text-shadow:0 0 10px var(--primary);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .container{padding:50px 20px;}
+  .solutions-grid{gap:30px; grid-template-columns:1fr;}
+  .solution-card{padding:40px 30px; min-height:400px;}
+  .icon-wrapper{width:150px; height:150px;}
+}

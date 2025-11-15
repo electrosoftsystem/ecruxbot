@@ -1,0 +1,188 @@
+@media (max-width: 600px) {
+  .product-card {
+    padding: 18px 8px 18px 8px !important;
+    margin: 18px auto !important;
+    border-radius: 16px !important;
+    max-width: 98vw !important;
+    box-shadow: 0 2px 8px #0003 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .product-image {
+    width: 100% !important;
+    max-width: 220px !important;
+    height: auto !important;
+    margin: 0 auto 16px auto !important;
+    display: block !important;
+  }
+  .product-title {
+    font-size: 1.3em !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+  }
+  .product-desc-list {
+    font-size: 1em !important;
+    padding-left: 10px !important;
+    margin-bottom: 18px !important;
+    text-align: left !important;
+  }
+  .product-btn {
+    width: 100%;
+    font-size: 1.1em !important;
+    padding: 1em 0 !important;
+    border-radius: 8px !important;
+    margin-top: 10px !important;
+  }
+}
+@media (max-width: 600px) {
+  .product-card {
+    padding: 18px 8px 18px 8px !important;
+    margin: 18px auto !important;
+    border-radius: 16px !important;
+    max-width: 98vw !important;
+    box-shadow: 0 2px 8px #0003 !important;
+  }
+  .product-image {
+    width: 100% !important;
+    max-width: 220px !important;
+    height: auto !important;
+    margin: 0 auto 16px auto !important;
+    display: block !important;
+  }
+  .product-title {
+    font-size: 1.3em !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+  }
+  .product-desc-list {
+    font-size: 1em !important;
+    padding-left: 10px !important;
+    margin-bottom: 18px !important;
+  }
+  .product-btn {
+    width: 100%;
+    font-size: 1.1em !important;
+    padding: 1em 0 !important;
+    border-radius: 8px !important;
+    margin-top: 10px !important;
+  }
+}
+@media (max-width: 600px) {
+  form {
+    padding: 18px 6px !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    border-radius: 14px !important;
+    font-size: 1em !important;
+    box-shadow: 0 2px 8px #0003 !important;
+  }
+  label {
+    font-size: 1em !important;
+    margin-bottom: 2px !important;
+  }
+  input, textarea, select {
+    font-size: 1em !important;
+    padding: 10px 8px !important;
+    margin-top: 4px !important;
+    margin-bottom: 2px !important;
+    border-radius: 7px !important;
+  }
+  button[type="submit"] {
+    width: 100%;
+    font-size: 1.1em !important;
+    padding: 1em 0 !important;
+    border-radius: 8px !important;
+    margin-top: 10px !important;
+  }
+}
+/* Order form full width for desktop */
+/* ...existing code... */
+/* ...existing code... */
+/* ...existing code... */
+.product-card {
+  background: rgba(30, 20, 60, 0.98);
+  border-radius: 24px;
+  box-shadow: 0 8px 48px 0 #0008, 0 4px 32px rgba(0,0,0,0.45);
+  padding: 36px 36px 32px 36px;
+  max-width: 900px;
+  width: 100%;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 32px auto;
+  border: 1.5px solid rgba(255,255,255,0.07);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+
+
+.product-image {
+  background: rgba(30,20,60,0.85);
+  border-radius: 16px;
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  margin-right: 32px;
+  box-shadow: 0 2px 16px #0004;
+}
+.product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.product-title {
+  color: #c084fc;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.product-desc-list {
+  margin-bottom: 28px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.7;
+  padding-left: 18px;
+  max-width: 500px;
+  text-align: left;
+}
+.product-btn {
+  background: #3973ff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 44px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px #3973ff44;
+  transition: background 0.2s;
+}
+
+/* Dotted pattern overlay for background, like Home/Course */
+.products-dot-bg {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1 !important;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.08) 1.2px, transparent 1.2px),
+    radial-gradient(rgba(255,255,255,0.08) 1.2px, transparent 1.2px);
+  background-size: 32px 32px, 32px 32px;
+  background-position: 0 0, 16px 16px;
+  width: 100vw !important;
+  height: 100vh !important;
+  opacity: 0.7;
+}
+
+.products-section {
+  position: relative;
+  z-index: 1;
+}
