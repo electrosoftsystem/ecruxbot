@@ -1,0 +1,116 @@
+/* Full-width grid background for skills section */
+.skills-section {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding: 3em 2em;
+}
+
+.skills-section::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,246,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,246,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: grid-flow 165s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes grid-flow {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(80px); }
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-title {
+  color: #b388ff;
+  text-align: center;
+  font-weight: 800;
+  font-size: 2em;
+  margin-bottom: 2em;
+  position: relative;
+  z-index: 2;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  position: relative;
+  z-index: 2;
+}
+
+.skill-card {
+  background: rgba(44, 36, 66, 0.92);
+  border-radius: 22px;
+  box-shadow: 0 8px 48px #b388ff33, 0 0 0 4px #b388ff22;
+  border: 1.5px solid rgba(255,255,255,0.08);
+  padding: 2em 1.5em;
+  min-width: 220px;
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.35s, transform 0.35s;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0,246,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,246,255,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: grid-flow 165s linear infinite;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.skill-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.skill-card:hover {
+  box-shadow: 0 12px 48px #b388ff55, 0 0 0 4px #b388ff44;
+  transform: translateY(-8px) scale(1.04);
+}
+
+.skill-card h3 {
+  color: #b388ff;
+  font-weight: 700;
+  font-size: 1.18em;
+  margin-bottom: 0.5em;
+}
+
+.skill-card p {
+  color: #e0e0e0;
+  font-size: 1em;
+  margin-bottom: 0.2em;
+}
+
+@media (max-width: 900px) {
+  .skills-section {
+    padding: 2em 1em;
+  }
+
+  .skills-grid {
+    gap: 1.2em;
+  }
+
+  .skill-card {
+    max-width: 95vw;
+  }
+}

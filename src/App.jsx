@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Product from './pages/Product';
 import Courses from './pages/Courses';
+import Skills from './pages/Skills';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
@@ -21,6 +22,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/products" element={<Product />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/skills" element={<Skills />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
   <Route path="/order" element={<OrderFormPage />} />

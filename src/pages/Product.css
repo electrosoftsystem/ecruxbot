@@ -215,6 +215,25 @@
   opacity: 0.72;
 }
 
+/* Full-width grid background for products section */
+.products-section::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,246,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,246,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: grid-flow 165s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes grid-flow {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(80px); }
+}
+
 .products-section {
   position: relative;
   z-index: 1;
