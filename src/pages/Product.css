@@ -1,3 +1,33 @@
+/* Light animated grid box for product/skill cards (matches About Us) */
+.light-bg-box {
+  position: relative;
+  background: rgba(44, 36, 66, 0.92);
+  border-radius: 22px;
+  box-shadow: 0 8px 48px #b388ff33, 0 0 0 4px #b388ff22;
+  border: 1.5px solid rgba(255,255,255,0.08);
+  padding: 2.2em 1.7em 1.7em 1.7em;
+  transition: box-shadow 0.35s, transform 0.35s;
+  overflow: hidden;
+}
+.light-bg-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0,246,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,246,255,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: grid-flow 165s linear infinite;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+@keyframes grid-flow {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(80px); }
+}
+.light-bg-box > * {
+  position: relative;
+  z-index: 1;
+}
 @media (max-width: 600px) {
   .product-card {
     padding: 18px 8px 18px 8px !important;

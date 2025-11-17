@@ -40,7 +40,7 @@ export default function Courses() {
         <h2 className="products-title">All The Skills You Need</h2>
         <div className="products-list">
           {courses.map((course, idx) => (
-            <div className="product-card" key={idx}>
+            <div className="product-card light-bg-box" key={idx}>
               <img src={course.image} alt={course.name} className="product-image" />
               <div className="product-details">
                 <div className="product-title">{course.name}</div>

@@ -1,3 +1,27 @@
+/* Light animated grid box for About Us cards (matches Product/Skills) */
+.light-bg-box {
+  position: relative;
+  overflow: hidden;
+}
+.light-bg-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0,246,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,246,255,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: grid-flow 165s linear infinite;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.light-bg-box > * {
+  position: relative;
+  z-index: 1;
+}
+@keyframes grid-flow {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(80px); }
+}
 /* ===== MILESTONES ANIMATED BLOCK ===== */
 .milestones-animated {
   position: relative;

@@ -195,7 +195,7 @@ export default function Product() {
           {products.map((product, idx) => {
             const imgSrc = product.images && product.images.length > 0 ? product.images[0] : (product.image || '');
             return (
-              <div className="product-card" key={idx}>
+              <div className="product-card light-bg-box" key={idx}>
                 <img src={imgSrc} alt={product.name} className="product-image" />
                 <div className="product-details">
                   <div className="product-title">{product.name}</div>
